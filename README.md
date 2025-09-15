@@ -54,13 +54,12 @@ Results will be printed in the console and saved to:
 
 ---
 
-## 🔹 What the Code Does
+# 📊 COMPARISON: BASELINE ANN vs SOANN (Paper Replica)
+
 - Example Output (comparison):
   - in this one, I used the data, from Backblaze drive_stats_2019_Q1.
   - I also set "USE_ALL_ATTRIBUTES = True" to use all the attributes not just the selected ones.
 
-
-# 📊 COMPARISON: BASELINE ANN vs SOANN (Paper Replica)
 
 ## ML Metrics
 | Metric     | ANN     | SOANN   | Δ (Improvement) |
