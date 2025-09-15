@@ -56,24 +56,38 @@ Results will be printed in the console and saved to:
 
 ## 🔹 What the Code Does
 - Example Output (comparison):
+  - in this one, I used the data, from Backblaze drive_stats_2019_Q1.
+  - I also set "USE_ALL_ATTRIBUTES = True" to use all the attributes not just the selected ones.
 
-================================================================================
-COMPARISON: BASELINE ANN vs SOANN (paper replica)
-================================================================================
 
-ML METRICS:
-accuracy   | ANN =  0.9971 | SOANN =  0.9982 | Δ = +0.0011
-precision  | ANN =  0.3659 | SOANN =  0.6190 | Δ = +0.2532
-recall     | ANN =  0.4688 | SOANN =  0.4062 | Δ = -0.0625
-f1         | ANN =  0.4110 | SOANN =  0.4906 | Δ = +0.0796
-roc_auc    | ANN =  0.9785 | SOANN =  0.9799 | Δ = +0.0014
+# 📊 COMPARISON: BASELINE ANN vs SOANN (Paper Replica)
 
-SERVICE METRICS:
-AST            | ANN =    2.95 | SOANN =    2.59 | Δ =   +0.36 (lower better)
-throughput_rpm | ANN =  196.00 | SOANN =  196.00 | Δ =   +0.00
-success_rate_pct | ANN =  100.00 | SOANN =  100.00 | Δ =   +0.00
-availability_pct | ANN =    0.00 | SOANN =    0.00 | Δ =   +0.00
+## ML Metrics
+| Metric     | ANN     | SOANN   | Δ (Improvement) |
+|------------|---------|---------|-----------------|
+| Accuracy   | 0.9971  | 0.9982  | ✅ +0.0011       |
+| Precision  | 0.3659  | 0.6190  | ✅ +0.2532       |
+| Recall     | 0.4688  | 0.4062  | ⚠️ -0.0625       |
+| F1 Score   | 0.4110  | 0.4906  | ✅ +0.0796       |
+| ROC AUC    | 0.9785  | 0.9799  | ✅ +0.0014       |
 
+## Service Metrics
+| Metric            | ANN    | SOANN  | Δ (Improvement)        |
+|-------------------|--------|--------|------------------------|
+| AST               | 2.95   | 2.59   | ✅ +0.36 (lower better) |
+| Throughput (rpm)  | 196.00 | 196.00 | ⚪ +0.00                |
+| Success Rate (%)  | 100.00 | 100.00 | ⚪ +0.00                |
+| Availability (%)  | 0.00   | 0.00   | ⚪ +0.00                |
+
+✅ = improvement
+⚠️ = drop
+⚪ = no change
+
+## 🔎 Summary
+- **SOANN outperforms ANN** in most ML metrics (precision, F1 score, ROC AUC).  
+- **Accuracy** shows a slight improvement.  
+- **Recall** drops a bit, meaning SOANN catches fewer failures but with higher precision.  
+- **Service metrics** show better **AST (Average Service Time)**, while throughput and success rate remain unchanged.  
 ---
 
 ⚡ This repo shows how nature-inspired optimization (SOA) can enhance fault prediction models beyond traditional ANNs.
