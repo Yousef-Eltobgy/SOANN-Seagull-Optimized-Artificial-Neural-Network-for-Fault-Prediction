@@ -7,6 +7,12 @@ The model is tested on the **Backblaze Hard Drive Dataset**, which provides real
 
 ---
 
+⚡ This repo shows how nature-inspired optimization (SOA) can enhance fault prediction models beyond traditional ANNs.
+
+
+
+---
+
 ## 🔹 What the Code Does
 - **Baseline ANN:**  
   - A standard Artificial Neural Network trained on SMART attributes.  
@@ -30,6 +36,7 @@ The model is tested on the **Backblaze Hard Drive Dataset**, which provides real
   - Prints a side-by-side comparison between **ANN** and **SOANN** across both ML and simulation metrics.  
   - Saves results in `JSON` and model weights in `.pth` format.  
 
+
 ---
 
 ## 🔹 Why This Matters
@@ -52,6 +59,7 @@ Results will be printed in the console and saved to:
 - baseline_model.pth
 - soann_model.pth
 
+
 ---
 
 # 📊 COMPARISON: BASELINE ANN vs SOANN (Paper Replica)
@@ -70,6 +78,7 @@ Results will be printed in the console and saved to:
 | F1 Score   | 0.4110  | 0.4906  | ✅ +0.0796       |
 | ROC AUC    | 0.9785  | 0.9799  | ✅ +0.0014       |
 
+
 ## Service Metrics
 | Metric            | ANN    | SOANN  | Δ (Improvement)        |
 |-------------------|--------|--------|------------------------|
@@ -82,14 +91,14 @@ Results will be printed in the console and saved to:
 ⚠️ = drop
 ⚪ = no change
 
+
+
 ## 🔎 Summary
 - **SOANN outperforms ANN** in most ML metrics (precision, F1 score, ROC AUC).  
 - **Accuracy** shows a slight improvement.  
 - **Recall** drops a bit, meaning SOANN catches fewer failures but with higher precision.  
 - **Service metrics** show better **AST (Average Service Time)**, while throughput and success rate remain unchanged.  
----
 
-⚡ This repo shows how nature-inspired optimization (SOA) can enhance fault prediction models beyond traditional ANNs.
 
 
 
